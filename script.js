@@ -98,7 +98,6 @@ const atualizarLista = (participantes) => {
     output = output + criarNovoParticipante(participante);
   }
 
-  // substituir informação do HTML
   document.querySelector("tbody").innerHTML = output;
 };
 
@@ -126,8 +125,8 @@ const adicionarParticipante = (event) => {
   participantes = [participante, ...participantes];
   atualizarLista(participantes);
 
-  event.querySelector('[name="nome"]').value = "";
-  event.querySelector('[name="email"]').value = "";
+  event.target.querySelector('[name="nome"]').value = "";
+  event.target.querySelector('[name="email"]').value = "";
 };
 
 const fazerCheckIn = (event) => {
